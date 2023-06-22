@@ -1,8 +1,10 @@
+import { StaticImageData } from "next/image";
+
 export interface Product {
     id: number;
     name: string;
     price: number;
-    imagePath: string;
+    image: StaticImageData;
   }
   
   export interface CartItem {

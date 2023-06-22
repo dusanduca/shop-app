@@ -1,0 +1,19 @@
+.container{
+    height: 100vh;
+}
+
+.main_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 5rem;
+    gap: 2rem;
+    
+}
+
+.nav_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}

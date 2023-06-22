@@ -3,22 +3,23 @@ import Image from "next/image";
 import React from "react";
 import styles from "./styles.module.css";
 import AddToCartBtn from "../AddToCartBtn";
-
-interface Props {
+interface ProductCardProps {
   product: Product;
 }
 
-const ProductCard = (props: Props) => {
+const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className={styles.product_container}>
       <Image
         className={styles.image}
-        src={props.product.imagePath}
-        alt={props.product.name}
+        src={product.image}
+        alt={product.name}
+        width={350}
+        height={250}
       />
-      <h4>{props.product.name}</h4>
-      <p>{props.product.price}</p>
-      <AddToCartBtn product={props.product} />
+      <h4>{product.name}</h4>
+      <p>${product.price}</p>
+      <AddToCartBtn product={product} />
     </div>
   );
 };

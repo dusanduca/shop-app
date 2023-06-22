@@ -1,5 +1,6 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
+import styles from "./styles.module.css";
 
 interface Props {
   onIncrease: () => void;
@@ -9,7 +10,7 @@ interface Props {
 
 const QtyBtn = (props: Props) => {
   return (
-    <div className="btn_container">
+    <div className={styles.btn_container}>
       <button onClick={props.onDecrase}>
         {props.qty === 1 ? <FaTrash /> : "-"}
       </button>

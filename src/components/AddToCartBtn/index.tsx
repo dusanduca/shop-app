@@ -7,33 +7,33 @@ import {
 } from "../store/cartSlice";
 import QtyBtn from "../QtyBtn";
 import { Product } from "../../../interfaces";
-
+import styles from "./styles.module.css"
 
 interface Props {
-  product: Product
+  product: Product;
 }
 
 const AddToCartBtn = (props: Props) => {
   const qty = useAppSelector((state) =>
     productQtyInCartSelector(state, props.product.id)
-  );
-
-  const dispatch = useAppDispatch();
+    );
+    
+    const dispatch = useAppDispatch();
   if (!qty)
     return (
-      <div className="btn-cart">
+      <div className={styles.btn_cart}>
         <button onClick={() => dispatch(increment(props.product))}>
           Add to cart
         </button>
       </div>
     );
   return (
-    <div className="btn-cart2">
-    <QtyBtn
-      onDecrase={() => dispatch(decrement(props.product))}
-      onIncrease={() => dispatch(increment(props.product))}
-      qty={qty}
-    />
+    <div className={styles.btn_cart2}>
+      <QtyBtn
+        onDecrase={() => dispatch(decrement(props.product))}
+        onIncrease={() => dispatch(increment(props.product))}
+        qty={qty}
+      />
     </div>
   );
 };

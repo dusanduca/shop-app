@@ -1,12 +1,25 @@
+import { Provider } from "react-redux";
 import { addedProduct } from "../../data";
 import ProductCard from "@/components/ProductCard";
+import { store } from "@/components/store/store";
+import styles from "./styles.module.css";
+import Navbar from "@/components/Navbar";
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="main_container">
-      {/* {addedProduct.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))} */}
-    </main>
+    <div className={styles.container}>
+      <div className={styles.nav_container}>
+        <Navbar />
+      </div>
+      <div className={styles.main_container}>
+        <Provider store={store}>
+          {addedProduct.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </Provider>
+      </div>
+    </div>
   );
-}
+};
+
+export default Home;

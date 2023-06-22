@@ -1,0 +1,10 @@
+.btn_cart {
+    display: flex;
+    justify-content: center;
+}
+
+.btn_cart button {
+    background-color: rgb(135, 143, 143);
+    color: white;
+    border-radius: 1rem;
+}
