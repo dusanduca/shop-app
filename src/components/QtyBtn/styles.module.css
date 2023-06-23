@@ -1,4 +1,13 @@
 .btn_container {
-    display: grid;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn_container button{
+    height: 1.6rem;
+    width: 2rem;
+    color: rgb(175, 36, 15);
+    cursor: pointer;
 }
