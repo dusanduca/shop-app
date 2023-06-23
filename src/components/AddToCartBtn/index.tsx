@@ -30,7 +30,7 @@ const AddToCartBtn = (props: Props) => {
   return (
     <div className={styles.btn_cart2}>
       <QtyBtn
-        onDecrase={() => dispatch(decrement(props.product))}
+        onDecrease={() => dispatch(decrement(props.product))}
         onIncrease={() => dispatch(increment(props.product))}
         qty={qty}
       />

@@ -5,6 +5,7 @@ import { store } from "@/components/store/store";
 import styles from "./styles.module.css";
 import Navbar from "@/components/Navbar";
 
+
 const Home = () => {
   return (
     <div className={styles.container}>

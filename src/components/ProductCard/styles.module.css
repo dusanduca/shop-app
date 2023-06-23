@@ -1,5 +1,7 @@
 .product_container{
     display: grid;
+    overflow: hidden;
+    justify-content: center;
 }
 
 .product_container  h4 {

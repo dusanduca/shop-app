@@ -11,7 +11,7 @@ const Navbar = () => {
         Shop
       </Link>
       <Link className={styles.link2} href={"/cart"}>
-        <FaShoppingCart />
+        {/* <CartBtn /> */}
       </Link>
     </nav>
   );

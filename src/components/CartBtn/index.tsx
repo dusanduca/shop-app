@@ -4,10 +4,16 @@ import { store, useAppSelector } from "../store/store";
 import { totalCartItemsSelector } from "../store/cartSlice";
 
 
-const CartBtn = () => {
+interface BtnProps {
+  index?: string,
+}
+
+const CartBtn = (props: BtnProps) => {
+
   const totalItems = useAppSelector(totalCartItemsSelector);
+  
   return (
-    <div>
+    <div key={props.index}>
       <FaShoppingCart />
       {!!totalItems && 
       <div key={totalItems}>
