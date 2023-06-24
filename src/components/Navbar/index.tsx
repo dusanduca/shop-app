@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import { FaShoppingCart } from "react-icons/fa";
 import styles from "./styles.module.css";
-import CartBtn from "../CartBtn";
+import CartButton from "../CartButton";
+
 
 const Navbar = () => {
   return (
@@ -11,7 +11,7 @@ const Navbar = () => {
         Shop
       </Link>
       <Link className={styles.link2} href={"/cart"}>
-        {/* <CartBtn /> */}
+        <CartButton />
       </Link>
     </nav>
   );

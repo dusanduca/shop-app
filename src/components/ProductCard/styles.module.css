@@ -5,13 +5,13 @@
 }
 
 .product_container  h4 {
-    display: flex;
+    text-align: center;
     justify-content: center;
     font-size: 1.2rem;
 }
 
 .product_container  p {
-    display: flex;
+    text-align: center;
     justify-content: center;
     font-size: 1.2rem;
 }
