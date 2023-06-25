@@ -5,7 +5,7 @@ import {
   increment,
   productQtyInCartSelector,
 } from "../store/cartSlice";
-import QtyBtn from "../QtyBtn";
+import QuantityButton from "../QuantityButton";
 import { Product } from "../../../interfaces";
 import styles from "./styles.module.css"
 
@@ -29,7 +29,7 @@ const AddToCartBtn = (props: Props) => {
     );
   return (
     <div className={styles.btn_cart2}>
-      <QtyBtn
+      <QuantityButton
         onDecrease={() => dispatch(decrement(props.product))}
         onIncrease={() => dispatch(increment(props.product))}
         qty={qty}

@@ -10,4 +10,6 @@
     width: 2rem;
     color: rgb(175, 36, 15);
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
 }

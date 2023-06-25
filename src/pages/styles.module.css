@@ -6,7 +6,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
-    flex-direction: row;
     padding: 5rem;
     gap: 2rem;
     
@@ -16,4 +15,6 @@
     display: flex;
     justify-content: space-between;
     gap: 5rem;
+    background-color: rgb(207, 206, 222);
+    margin: -0.5rem;
 }

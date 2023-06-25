@@ -1,0 +1,7 @@
+.total_number{
+    font-size: 1.2rem;
+    border: 1px solid rgb(178, 31, 31);
+    background-color: rgb(237, 73, 73);
+    text-align: center;
+    border-radius: 50%;
+}

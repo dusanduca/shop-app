@@ -1,23 +1,21 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import { store, useAppSelector } from "../store/store";
+import { useAppSelector } from "../store/store";
 import { totalCartItemsSelector } from "../store/cartSlice";
 import styles from "./styles.module.css";
 
 
-interface ButtonProps {
-  className?: string,
-}
 
-const CartButton = (props: ButtonProps) => {
+
+const CartButton = () => {
 
   const totalItems = useAppSelector(totalCartItemsSelector);
   
   return (
-    <div className={`${props.className}`} >
+    <div className={styles.cart_button_container} >
       <FaShoppingCart />
       {!!totalItems && 
-       <div  >
+       <div className={styles.total_number}>
         {totalItems}
       </div>}
     </div>

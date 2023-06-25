@@ -8,7 +8,7 @@ interface Props {
   qty: number;
 }
 
-const QtyBtn = (props: Props) => {
+const QuantityButton = (props: Props) => {
   return (
     <div className={styles.btn_container}>
       <button  onClick={props.onDecrease}>
@@ -21,4 +21,4 @@ const QtyBtn = (props: Props) => {
   );
 };
 
-export default QtyBtn;
+export default QuantityButton;
