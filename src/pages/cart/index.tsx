@@ -5,6 +5,7 @@ import React from "react";
 
 
 
+
 const CartPage = () => {
 
     const cartItems = useAppSelector(
@@ -13,12 +14,15 @@ const CartPage = () => {
     const totalPrice = useAppSelector(TotalPriceSelector);
     return(
         <div>
+            
+
             {cartItems.map((item) =>
                 (<CartItemCard cartItem={item} key={item.product.id} />))}
 
             <p>Total Price: {""}
                <span>${totalPrice}</span>
             </p> 
+                
                 
         </div>
     )
