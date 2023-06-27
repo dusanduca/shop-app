@@ -2,8 +2,8 @@ import { Provider } from "react-redux";
 import { addedProduct } from "../../data";
 import ProductCard from "@/components/ProductCard";
 import { store } from "@/components/store/store";
-import styles from "./styles.module.css";
 import Navbar from "@/components/Navbar";
+import styles from "./styles.module.css"
 
 const Home = () => {
   return (
@@ -17,6 +17,7 @@ const Home = () => {
             <ProductCard key={product.id} product={product} />
           ))}
         </Provider>
+        This is a test branch
       </div>
     </div>
   );
