@@ -1,20 +1,21 @@
 import Navbar from "@/components/Navbar";
 import { store } from "@/components/store/store";
 import { Provider } from "react-redux";
+import styles from "./styles.module.css";
 
-interface Props {
+interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: Props) {
+export default function Layout({ children }: LayoutProps) {
   return (
     <>
-
-     <Provider store={store}>
-      <Navbar />
-        <main>{children}</main>
-     </Provider>
-        
+      <div className={styles.container}>
+        <Provider store={store}>
+          <Navbar />
+          <main>{children}</main>
+        </Provider>
+      </div>
     </>
   );
 }

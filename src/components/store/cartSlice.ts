@@ -1,13 +1,11 @@
 import { PayloadAction, createSelector, createSlice } from "@reduxjs/toolkit";
 import { CartItem, Product } from "../../../interfaces";
 import { RootState } from "../store/store";
+import initialState from "./initial";
 
 export interface CartState {
   cartItems: CartItem[];
 }
-const initialState: CartState = {
-  cartItems: [],
-};
 
 export const cartSlice = createSlice({
   name: "cart",
@@ -42,23 +40,7 @@ export const cartSlice = createSlice({
   },
 });
 
-const cartItems = (state: RootState) => state.cart.cartItems;
-
-export const productQtyInCartSelector = createSelector(
-  [cartItems, (cartItems, productId: number) => productId],
-  (cartItems, productId) =>
-    cartItems.find((el: { product: { id: number; }; }) => el.product.id === productId)?.qty
-);
-
-export const totalCartItemsSelector = createSelector([cartItems], (cartItems) =>
-  cartItems.reduce((total: number, curr: CartItem) => (total += curr.qty), 0)
-);
-export const TotalPriceSelector = createSelector([cartItems], (cartItems) =>
-  cartItems.reduce(
-    (total: number, curr: CartItem) => (total += curr.qty * curr.product.price),
-    0
-  )
-);
+export const cartItems = (state: RootState) => state.cart.cartItems;
 
 export const { increment, decrement } = cartSlice.actions;
 

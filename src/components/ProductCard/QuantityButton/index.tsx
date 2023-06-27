@@ -11,9 +11,8 @@ interface Props {
 const QuantityButton = (props: Props) => {
   return (
     <div className={styles.btn_container}>
-      <button  onClick={props.onDecrease}>
+      <button onClick={props.onDecrease}>
         {props.qty === 1 ? <FaTrash /> : "-"}
-        
       </button>
       <p>{props.qty}</p>
       <button onClick={props.onIncrease}> + </button>

@@ -1,23 +1,16 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { useAppSelector } from "../store/store";
-import { totalCartItemsSelector } from "../store/cartSlice";
+import { selectCartItems } from "../store/cart/selectors";
 import styles from "./styles.module.css";
 
-
-
-
 const CartButton = () => {
+  const totalItems = useAppSelector(selectCartItems);
 
-  const totalItems = useAppSelector(totalCartItemsSelector);
-  
   return (
-    <div className={styles.cart_button_container} >
+    <div className={styles.cart_button_container}>
       <FaShoppingCart />
-      {!!totalItems && 
-       <div className={styles.total_number}>
-        {totalItems}
-      </div>}
+      {!!totalItems && <div className={styles.total_number}>{totalItems}</div>}
     </div>
   );
 };

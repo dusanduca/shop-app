@@ -2,7 +2,7 @@ import { Product } from "../../../interfaces";
 import Image from "next/image";
 import React from "react";
 import styles from "./styles.module.css";
-import AddToCartBtn from "../AddToCartBtn";
+import AddToCartBtn from "./AddToCartBtn";
 interface ProductCardProps {
   product: Product;
 }

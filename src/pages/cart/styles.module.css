@@ -1,0 +1,13 @@
+.page_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.2rem;
+}
+
+.page_container > p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(9, 149, 32);
+}

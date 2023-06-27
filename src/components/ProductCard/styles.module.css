@@ -1,17 +1,20 @@
-.product_container{
-    display: grid;
-    overflow: hidden;
-    justify-content: center;
+.product_container {
+  display: grid;
+  overflow: hidden;
+  justify-content: center;
+  border: 1rem solid rgb(235, 238, 240);
+  border-radius: 1rem;
 }
 
-.product_container  h4 {
-    text-align: center;
-    justify-content: center;
-    font-size: 1.2rem;
+.product_container h4 {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.product_container  p {
-    text-align: center;
-    justify-content: center;
-    font-size: 1.2rem;
+.product_container p {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.2rem;
 }

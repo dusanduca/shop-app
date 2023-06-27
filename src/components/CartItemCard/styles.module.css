@@ -1,0 +1,15 @@
+.card_container {
+  display: grid;
+  justify-content: center;
+  border-right: 2px solid rgb(230, 226, 226);
+  border-bottom: 2px solid rgb(240, 235, 235);
+}
+
+.card_list {
+  text-align: center;
+}
+
+.name {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
