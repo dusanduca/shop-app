@@ -3,8 +3,8 @@ import { CartItem } from "../../../interfaces";
 import Image from "next/image";
 import styles from "./styles.module.css";
 import QuantityButton from "../ProductCard/QuantityButton";
-import { decrement, increment } from "../store/cartSlice";
-import { useAppDispatch } from "../store/store";
+import { decrement, increment } from "../../store/cart/cartSlice";
+import { useAppDispatch } from "../../store/store";
 
 interface Props {
   cartItem: CartItem;

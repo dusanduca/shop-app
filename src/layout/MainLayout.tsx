@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import { store } from "@/components/store/store";
+import { store } from "@/store/store";
 import { Provider } from "react-redux";
 import styles from "./styles.module.css";
 

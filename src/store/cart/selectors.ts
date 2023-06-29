@@ -1,6 +1,6 @@
 import { createSelector } from "@reduxjs/toolkit";
-import { cartItems } from "../cartSlice";
-import { CartItem } from "../../../../interfaces";
+import { cartItems } from "./cartSlice";
+import { CartItem } from "../../../interfaces";
 
 export const selectCartItems = createSelector([cartItems], (cartItems) =>
   cartItems.reduce((total: number, curr: CartItem) => (total += curr.qty), 0)

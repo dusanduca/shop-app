@@ -1,6 +1,6 @@
 import CartItemCard from "@/components/CartItemCard";
-import { selectTotal } from "@/components/store/cart/selectors";
-import { useAppSelector } from "@/components/store/store";
+import { selectTotal } from "@/store/cart/selectors"; 
+import { useAppSelector } from "@/store/store"; 
 import Layout from "@/layout/MainLayout";
 import React from "react";
 import styles from "./styles.module.css";

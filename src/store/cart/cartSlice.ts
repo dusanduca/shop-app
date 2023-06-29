@@ -1,7 +1,7 @@
 import { PayloadAction, createSelector, createSlice } from "@reduxjs/toolkit";
 import { CartItem, Product } from "../../../interfaces";
-import { RootState } from "../store/store";
-import initialState from "./initial";
+import { RootState } from "../store";
+import initialState from "./initialState";
 
 export interface CartState {
   cartItems: CartItem[];

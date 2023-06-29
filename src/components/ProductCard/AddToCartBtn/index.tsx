@@ -1,7 +1,7 @@
 import React from "react";
-import { useAppDispatch, useAppSelector } from "../../store/store";
-import { decrement, increment } from "../../store/cartSlice";
-import { selectProductQuantity } from "../../store/cart/selectors";
+import { useAppDispatch, useAppSelector } from "../../../store/store";
+import { decrement, increment } from "../../../store/cart/cartSlice";
+import { selectProductQuantity } from "../../../store/cart/selectors";
 import QuantityButton from "../QuantityButton";
 import { Product } from "../../../../interfaces";
 import styles from "./styles.module.css";
